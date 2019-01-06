@@ -1,0 +1,20 @@
+﻿@using DejtingProjekt.Models
+@model ProfileIndexViewModel
+
+<table>
+    @foreach (var profile in Model.Profiles)
+    {
+    <tr>
+        <td>@profile.FirstName</td>
+        <td>@profile.LastName</td>
+        <td>@profile.UserName</td>
+        <td>@profile.Birthdate</td>
+        <td>@profile.City</td>
+        <td>@profile.Height</td>
+        <td>@profile.Gender</td>
+
+    </tr>
+
+    }
+</table>
+@Html.Partial("AddProfileForm", new ProfileModel())
